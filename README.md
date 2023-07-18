@@ -5,6 +5,6 @@ tom is very barebones at the moment btw <br>
 - install nodejs/npm
 - go to directory
 - run `npm audit fix --force` to get dependencies
-- run `node index.js`
+- on windows, open `run.bat`, on linux run `run.sh`
 - check the console and there should be a message saying the bot is logged in
 - DO NOT PASTE THE TOKEN ANYWHERE THATS BAD
