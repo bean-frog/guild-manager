@@ -14,7 +14,7 @@ let playersDisplay = document.getElementById('players');
 
 var xhr = new XMLHttpRequest();
 
-xhr.open('GET', 'https://raw.githubusercontent.com/bean-frog/bean-frog.github.io/main/projects/guildtest/test.json?nocache=' + nocache, true);
+xhr.open('GET', 'https://raw.githubusercontent.com/goofyahhstorageaccount/tom2-data/main/data.json?nocache=' + nocache, true);
 
 xhr.onreadystatechange = function() {
   if (xhr.readyState === 4) { //xhr ready
