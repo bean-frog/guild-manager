@@ -1,0 +1,19 @@
+{
+  "name": "tom2",
+  "version": "1.0.0",
+  "description": "tom2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@octokit/rest": "^20.0.1",
+    "discord.js": "^14.11.0",
+    "fs": "^0.0.1-security",
+    "github-api": "^3.4.0",
+    "octokit": "^3.0.0",
+    "wokcommands": "^2.1.9"
+  }
+}
