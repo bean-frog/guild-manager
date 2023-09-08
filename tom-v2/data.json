@@ -1,4 +1,5 @@
 {
+  "announcement": "test announcement: game on insert date!",
   "game": false,
   "gamemode": "supercharged frenzy",
   "mod": "Graeme",
