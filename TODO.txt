@@ -1,0 +1,2 @@
+- Make frontend mobile-friendly
+- per gamemode remove unused user attributes (class, team etc);

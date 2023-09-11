@@ -27,7 +27,7 @@ function toTitleCase(str) { //title case function (for data formatting on displa
 
 var xhr = new XMLHttpRequest();
 
-xhr.open('GET', `https://raw.githubusercontent.com/goofyahhstorageaccount/tom2-data/main/data.json?nocache=${nocache}&nocache2=${nocache2}`, true);
+xhr.open('GET', `https://raw.githubusercontent.com/bean-frog/bean-frog.github.io/main/projects/guildtest/test.json?nocache=${nocache}&nocache2=${nocache2}`, true);
 xhr.onreadystatechange = function() {
   if (xhr.readyState === 4) { //xhr ready
     if (xhr.status === 200) { //file pulled
@@ -49,23 +49,30 @@ xhr.onreadystatechange = function() {
         modDisplay.innerHTML = toTitleCase(currentMod);
 
        // Player cards
-players.forEach(player => {
-  const cardBackgroundColor = player.status === 'dead' ? 'bg-red-600' : 'bg-gray-900';
-  
-  const playerCardHTML = `
-    <div class="${cardBackgroundColor} rounded-lg shadow-xl shadow-gray-600 p-6 mb-4">
-      <h2 class="text-2xl font-bold text-white">${toTitleCase(player.name)}</h2>
-      <p class="text-white text-xl"><strong>${player.status}</strong></p>
-      <p class="text-white">Class: ${player.class}</p>
-      <p class="text-white">Team: ${player.team}</p>
-      <p class="text-white">Points: ${player.points}</p>
-      <p class="text-white">Last Activity: ${player.lastactivity}</p>
-    </div>
-  `;
-
-  playerCardsContainer.innerHTML += playerCardHTML;
-});
-
+       players.forEach(player => {
+        const cardBackgroundColor = player.status === 'dead' ? 'bg-red-600' : 'bg-gray-900';
+      
+        let playerCardHTML = `
+          <div class="${cardBackgroundColor} rounded-lg shadow-xl shadow-gray-600 p-6 mb-4">
+            <h2 class="text-2xl font-bold text-white">${toTitleCase(player.name)}</h2>
+            <p class="text-white text-xl"><strong>${player.status}</strong></p>
+            
+        `;
+      
+        // Check the value of data.gamemode and conditionally omit attributes
+        if (toTitleCase(data.gamemode).includes('Oxfords')) {
+          playerCardHTML += `
+          <p class="text-white">Points: ${player.points}</p>
+          `;
+        }
+      
+        playerCardHTML += `
+        <p class="text-white">Last Activity: ${player.lastactivity}</p>
+        </div>`;
+      
+        playerCardsContainer.innerHTML += playerCardHTML;
+      });
+      
         
 
 

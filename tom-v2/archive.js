@@ -27,7 +27,7 @@ client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}`)
 });
 client.on('messageCreate', async (message) => {
-    const repliedMessageId = message.reference?.messageId;
+    const repliedMessageId = message.reference.messageId;
     const content = message.content;
     const member = message.member;
     if (content.startsWith('!')){
