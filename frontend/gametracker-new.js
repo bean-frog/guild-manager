@@ -64,7 +64,12 @@ xhr.onreadystatechange = function() {
           playerCardHTML += `
           <p class="text-white">Points: ${player.points}</p>
           `;
-        }
+        };
+        if (toTitleCase(data.gamemode).includes('Frenzy')) { //takes care of frenzy and scf
+          playerCardHTML += `
+          <p class="text-white">Class: ${player.class}</p>
+          `;
+        };
       
         playerCardHTML += `
         <p class="text-white">Last Activity: ${player.lastactivity}</p>
@@ -72,13 +77,6 @@ xhr.onreadystatechange = function() {
       
         playerCardsContainer.innerHTML += playerCardHTML;
       });
-      
-        
-
-
-
-
-
         //killfeed
         var killfeedList = document.createElement('ul');
         killfeedList.classList.add('flex', 'flex-col', 'items-center')
@@ -110,7 +108,7 @@ xhr.onreadystatechange = function() {
                   var node = walker.currentNode;
                   var regex = new RegExp(zombie, "g");
                   if (node.textContent.includes(zombie)) {
-                    var span = document.createElement("span");
+                    var span = documen.t.createElement("span");
                     span.style.color = "green";
                     span.innerHTML = node.textContent.replace(regex, "<span style='color:green'>$&</span>");
                     node.parentNode.replaceChild(span, node);

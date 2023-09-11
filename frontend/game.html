@@ -27,45 +27,40 @@
     gtag('config', 'G-8PHX1Y2CBG');
 </script>
 
-<body>
+<body class="bg-gray-900 text-white">
+    <header class="py-4 pl-4 md:pl-10 bg-gray-800">
+        <div class="container mx-auto flex items-center justify-between">
+            <a href="https://www.github.com/bean-frog/guild-manager" class="text-xl"><i class="fab fa-github"></i></a>
+            <h1 class="text-2xl font-bold inline-block">Current Assassin's Guild Game</h1>
+        </div>
+    </header>
+    <main class="container mx-auto py-6 md:py-12">
+        <div class="pl-4 md:pl-10 pt-6 md:pt-10 grid gap-4 md:gap-6 lg:grid-cols-3">
+            <div class="rounded-lg p-4 md:p-6 flex flex-col items-center"></div>
+            <div class="bg-gray-800 rounded-lg shadow-lg p-4 md:p-6 flex flex-col items-center">
+                <h1 class="text-2xl font-bold inline-block">Game Status: <span id="status"></span></h1>
+                <h2 class="text-xl font-bold inline-block">Gamemode: <span id="gamemode"></span></h2>
+                <h2 class="text-xl font-bold inline-block">Mod: <span id="currentMod"></span></h2>
+            </div>
+        </div>
 
-    <body class="bg-gray-900 text-white">
-        <header class="py-4 pl-10 bg-gray-800">
-            <div class="container mx-auto">
-                <a href="https://www.github.com/bean-frog/guild-manager" class="text-xl"><i class="fa-brands fa-github"></i> </a>
-                <h1 class="text-2xl font-bold inline-block">Current Assassin's Guild Game</h1>
+        <div class="pl-4 md:pl-10 pt-6 md:pt-10 gap-4 md:gap-6 flex flex-col md:flex-row">
+            <div class="bg-gray-800 rounded-lg shadow-lg p-4 md:p-6 flex flex-col items-center md:w-3/4">
+                <h1 class="text-3xl font-bold inline-block pb-3 md:pb-5">Players:</h1>
+                <div id="players" class="flex flex-wrap gap-2 md:mr-4"></div>
             </div>
-        </header>
-        <main class="container mx-auto py-12">
-            <div class="pl-10 pt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                <div class="rounded-lg p-6 flex flex-col items-center"></div>
-                <div class="bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center">
-                    <h1 class="text-2xl font-bold inline-block">Game Status: <span id="status"></span></h1>
-                    <h2 class="text-xl font-bold inline-block">Gamemode: <span id="gamemode"></span></h2>
-                    <h2 class="text-xl font-bold inline-block">Mod: <span id="currentMod"></span></h2>
-                </div>
+            <div class="bg-gray-800 rounded-lg shadow-lg p-4 md:p-6 flex flex-col items-center mt-6 md:mt-0 md:w-1/4">
+                <h1 class="text-3xl font-bold pb-3 md:pb-5">Killfeed</h1>
+                <div id="killfeed" class="justify-center"></div>
             </div>
-
-            <div class="pl-10 pt-10 gap-6 flex flex-row">
-                <div class="bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center w-3/4">
-                    <h1 class="text-3xl font-bold inline-block pb-5">Players:</h1>
-                    <div id="players" class="flex">
-                        <div id="playercards"class="flex flex-wrap gap-2 mr-20"></div>
-                    </div>
-                </div>
-                <div class="bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col items-center w-1/4">
-                    <h1 class="text-3xl font-bold pb-5">Killfeed</h1>
-                    <div id="killfeed" class="justify-center"></div>
-                </div>
-                
-            </div>
-        </main>
-        <footer class="py-2 bg-gray-700 text-gray-400">
-            <div class="container mx-auto text-center text-sm">
-                &copy; 2023 bean_frog. All rights reserved.
-            </div>
-        </footer>
-    </body>
+        </div>
+    </main>
+    <footer class="py-2 bg-gray-700 text-gray-400">
+        <div class="container mx-auto text-center text-sm">
+            &copy; 2023 bean_frog. All rights reserved.
+        </div>
+    </footer>
+</body>
     <script src="gametracker-new.js"></script>
 
 </html>
