@@ -63,6 +63,7 @@ xhr.onreadystatechange = function() {
         if (toTitleCase(data.gamemode).includes('Oxfords')) {
           playerCardHTML += `
           <p class="text-white">Points: ${player.points}</p>
+          <p class="text-white">Respawn Timer: ${player.respawntimer}</p>
           `;
         };
         if (toTitleCase(data.gamemode).includes('Frenzy')) { //takes care of frenzy and scf
